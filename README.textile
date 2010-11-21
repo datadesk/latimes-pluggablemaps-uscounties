@@ -42,13 +42,13 @@ h3. 04. Load the data
 From the same shell, enter the following. Then go get a cup of coffee because this takes forever. Sorry about that.
 <pre><code>python manage.py loaduscounties</code></pre>
 
-h3. 05. If you want to check out the demostration maps, install the urls
+h3. 05. If you want to check out the demostration maps...
 
 In in your urls.py file's urlpatterns tuple, add the following.
 <pre><code>(r'^us-counties/', include('us_counties.urls')),</code></pre>
 
-Check out the OpenLayers demo by visiting
-<pre><code>http://localhost:8000/us-counties/openlayers/</pre></code>
+Check out the OpenLayers demo by visiting:
+<pre><code>http://localhost:8000/us-counties/openlayers/</code></pre>
 
 h2. Version 1 Roadmap
 
