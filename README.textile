@@ -50,6 +50,9 @@ In in your urls.py file's urlpatterns tuple, add the following.
 h2. Version 1 Roadmap
 
 # A speedier loader that does require a huge file download
+# Class-based generic views
+# A polymaps example
+# A raphael example
 # Unit tests
 # help_text entries for the fields that define the different codes
 # Figure out display names for functional status codes. Anyone know them?
