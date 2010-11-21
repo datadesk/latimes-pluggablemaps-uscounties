@@ -19,7 +19,7 @@ Before you being, you will need to have a Django project with GeoDjango's 'djang
 
 h2. Installation
 
-h4. 01. Install the source code
+h3. 01. Install the source code
 
 You can download it from PyPi.
 <pre><code>pip install latimes-pluggablemaps-uscounties</code></pre>
