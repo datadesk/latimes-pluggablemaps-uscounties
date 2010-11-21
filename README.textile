@@ -13,6 +13,12 @@
 
 A pluggable GeoDjango app with the boundaries of United States counties. Geography, loosely coupled.
 
+h2. Features
+
+* A ready-to-serve model with all the counties in the United States
+* A read-only admin for reviewing the data
+* Demonstration pages that show how the counties can be displayed with common browser-based mapping libraries.
+
 h2. Requirements
 
 Before you begin, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured. The official installation guide is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/. The official tutorial is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/. Both are excellent.
@@ -60,4 +66,5 @@ h2. Version 1 Roadmap
 # Unit tests
 # help_text entries for the fields that define the different codes
 # Figure out display names for functional status codes. Anyone know them?
+# Managers that limit the counties to the lower 48 or the 50 states
 
