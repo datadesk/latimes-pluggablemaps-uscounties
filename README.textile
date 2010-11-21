@@ -39,7 +39,7 @@ From the shell, enter:
 
 h3. 04. Load the data
 
-From the same shell, enter the following. Then go get a cup of coffee because this takes forever. Sorry about that.
+From the same shell, enter the following. Then go get a cup of coffee because this takes forever. Sorry about that. Maybe "this Denzel spoof":http://www.hulu.com/watch/193067/saturday-night-live-unstoppable-trailer can make up for it.
 <pre><code>python manage.py loaduscounties</code></pre>
 
 h3. 05. Check out the demostration maps
