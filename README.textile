@@ -27,22 +27,22 @@ You can download it from PyPi.
 Or, pull the trunk from github
 <pre><code>git clone git://github.com/datadesk/latimes-pluggablemaps-uscounties.git</code></pre>
 
-*02. Install the app in your Django project*
+h3. 02. Install the app in your Django project
 
 In settings.py's INSTALLED_APPS tuple, add the following.
 <pre><code>'us_counties',</code></pre>
 
-*03. Create the database tables*
+h3. 03. Create the database tables
 
 From the shell, enter:
 <pre><code>python manage.py syncdb</code></pre>
 
-*04. Load the data*
+h3. 04. Load the data
 
 From the same shell, enter the following. Then go get a cup of coffee because this takes forever. Sorry about that.
 <pre><code>python manage.py loaduscounties</code></pre>
 
-*05. If you want to check out the demostration maps, install the urls*
+h3. 05. If you want to check out the demostration maps, install the urls
 
 In in your urls.py file's urlpatterns tuple, add the following.
 <pre><code>(r'^us-counties/', include('us_counties.urls')),</code></pre>
