@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>{% block title %}{% endblock %}</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   {% block extra-css %}
+   {% endblock %}
+   {% block extra-js %}
+   {% endblock %}
+</head>
+<body>
+<div id="doc4" class="yui-t7">
+   <div id="hd" role="banner">
+   {% block header %}
+   {% endblock %}
+   </div>
+   <div id="bd" role="main">
+    <div class="yui-g">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    </div>
+   <div id="ft" role="contentinfo">
+   {% block footer %}
+   {% endblock %}
+   </div>
+</div>
+</body>
+</html>
