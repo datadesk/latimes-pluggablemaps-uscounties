@@ -13,6 +13,8 @@
 
 A pluggable GeoDjango app with the boundaries of United States counties. Geography, loosely coupled.
 
+<blink>Beware. This software is alpha and has not yet been widely tested.</blink>
+
 h2. Features
 
 * A ready-to-serve model with all the counties in the United States
