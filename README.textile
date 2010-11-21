@@ -15,7 +15,7 @@ A pluggable GeoDjango app with the boundaries of United States counties. Geograp
 
 h2. Requirements
 
-Before you being, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured. The official installation guide is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/. The official tutorial is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/. Both are excellent.
+Before you begin, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured. The official installation guide is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/. The official tutorial is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/. Both are excellent.
 
 h2. Installation
 
