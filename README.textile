@@ -19,7 +19,7 @@ h2. Features
 
 * A ready-to-serve model with all the counties in the United States
 * A read-only admin for reviewing the data
-* Demonstration pages that show how the counties can be displayed with common browser-based mapping libraries.
+* Templates that show how the counties can be displayed with common browser-based mapping libraries.
 
 h2. Requirements
 
