@@ -48,8 +48,8 @@ In in your urls.py file's urlpatterns tuple, add the following.
 <pre><code>(r'^us-counties/', include('us_counties.urls')),</code></pre>
 
 Check out the OpenLayers demo by visiting:
-<img src="https://github.com/datadesk/latimes-pluggablemaps-uscounties/raw/master/docs/img/openlayers-600x479.png">
 <pre><code>http://localhost:8000/us-counties/openlayers/</code></pre>
+<img src="https://github.com/datadesk/latimes-pluggablemaps-uscounties/raw/master/docs/img/openlayers-600x479.png">
 
 h2. Version 1 Roadmap
 
