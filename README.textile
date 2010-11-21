@@ -21,7 +21,7 @@ h2. Installation
 
 *01. Install the source code*
 
-You can download it from PyPi.
+_You can download it from PyPi._
 <pre><code>pip install latimes-pluggablemaps-uscounties</code></pre>
 
 Or, pull the trunk from github
