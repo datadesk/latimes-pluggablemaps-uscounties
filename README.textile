@@ -1,0 +1,43 @@
+h1. latimes-pluggablemaps-uscounties
+
+A pluggable GeoDjango app with the boundaries of United States counties. Geography, loosely coupled.
+
+h3. Installation
+
+Before you being, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured.
+
+*01. Install the source code*
+
+You can download it from PyPi.
+<pre><code>pip install latimes-pluggablemaps-uscounties</code></pre>
+
+Or, pull the trunk from github
+<pre><code>git clone git://github.com/datadesk/latimes-pluggablemaps-uscounties.git</code></pre>
+
+*02. Install the app in your Django project*
+
+In settings.py's INSTALLED_APPS tuple, add the following.
+<pre><code>'us_counties',</code></pre>
+
+*03. Create the database tables*
+
+From the shell, enter:
+<pre><code>python manage.py syncdb</code></pre>
+
+*04. Load the data*
+
+From the same shell, enter the following. Then go get a cup of coffee because this takes forever. Sorry about that.
+<pre><code>python manage.py loaduscounties</code></pre>
+
+*05. If you want to check out the demostration maps, install the urls*
+
+In in your urls.py file's urlpatterns tuple, add the following.
+<pre><code>(r'^us-counties/', include('us_counties.urls')),</code></pre>
+
+h3. Version 1 Roadmap
+
+# A speedier loader that does require a huge file download
+# Unit tests
+# help_text entries for the fields that define the different codes
+# Figure out display names for functional status codes. Anyone know them?
+
