@@ -2,8 +2,13 @@
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-   <title>{% block title %}{% endblock %}</title>
+   <title>{% block title %}{{ state_name }}{% endblock %}</title>
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <style type="text/css">
+   body {font-family: Georgia, serif; }
+   #hd { margin-top:10px;}
+   h1 { font-size:30px; }
+   </style>
    {% block extra-css %}
    {% endblock %}
    {% block extra-js %}
@@ -13,6 +18,31 @@
 <div id="doc4" class="yui-t7">
    <div id="hd" role="banner">
    {% block header %}
+   <div style="float:right; padding-top:2px;">
+    <form 
+        style="margin-top:2px; padding-bottom:18px;"
+        action=""
+        method="get">
+        
+        <select
+            style="width:226px; font-size:1.4em;"
+            name="state">
+            <option value="">Select a state</option>
+            {% for obj in state_list %}
+                <option value="{{ obj.slug }}">{{ obj.name }}</option>
+            {% endfor %}
+        </select>
+        
+        <input 
+            style="font-size:1.2em;" 
+            type="submit" 
+            value="GO" />
+
+    </form>
+   </div>
+    <div style="float:left;">
+       <h1>{{ state_name }}</h1>
+    </div>
    {% endblock %}
    </div>
    <div id="bd" role="main">
