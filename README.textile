@@ -1,8 +1,19 @@
-h1. latimes-pluggablemaps-uscounties
+<pre><code>
+8888888b.  888                                     888      888          888b     d888                            
+888   Y88b 888                                     888      888          8888b   d8888                            
+888    888 888                                     888      888          88888b.d88888                            
+888   d88P 888 888  888  .d88b.   .d88b.   8888b.  88888b.  888  .d88b.  888Y88888P888  8888b.  88888b.  .d8888b  
+8888888P"  888 888  888 d88P"88b d88P"88b     "88b 888 "88b 888 d8P  Y8b 888 Y888P 888     "88b 888 "88b 88K      
+888        888 888  888 888  888 888  888 .d888888 888  888 888 88888888 888  Y8P  888 .d888888 888  888 "Y8888b. 
+888        888 Y88b 888 Y88b 888 Y88b 888 888  888 888 d88P 888 Y8b.     888   "   888 888  888 888 d88P      X88 
+888        888  "Y88888  "Y88888  "Y88888 "Y888888 88888P"  888  "Y8888  888       888 "Y888888 88888P"   88888P' 
+                             888      888                                                       888               
+                        Y8b d88P Y8b d88P                                                       888               
+                         "Y88P"   "Y88P"                                                        888               </code></pre>
 
 A pluggable GeoDjango app with the boundaries of United States counties. Geography, loosely coupled.
 
-h3. Installation
+h2. Installation
 
 Before you being, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured.
 
@@ -34,7 +45,7 @@ From the same shell, enter the following. Then go get a cup of coffee because th
 In in your urls.py file's urlpatterns tuple, add the following.
 <pre><code>(r'^us-counties/', include('us_counties.urls')),</code></pre>
 
-h3. Version 1 Roadmap
+h2. Version 1 Roadmap
 
 # A speedier loader that does require a huge file download
 # Unit tests
