@@ -7,7 +7,9 @@
    <style type="text/css">
    body {font-family: Georgia, serif; }
    #hd { margin-top:10px;}
+   #ft { margin-top:10px;}
    h1 { font-size:30px; }
+   h2 { font-size:25px; text-align:center; }
    </style>
    {% block extra-css %}
    {% endblock %}
@@ -54,6 +56,7 @@
     </div>
    <div id="ft" role="contentinfo">
    {% block footer %}
+   <h2 id="selected-object"></h2>
    {% endblock %}
    </div>
 </div>
