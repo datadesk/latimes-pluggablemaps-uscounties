@@ -68,7 +68,7 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
 
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='alpha-0.17a',
+      version='alpha-0.17b',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',
@@ -76,7 +76,9 @@ setup(name='latimes-pluggablemaps-uscounties',
       download_url='http://github.com/datadesk/latimes-pluggablemaps-uscounties.git',
       packages=packages,
       cmdclass = cmdclasses,
-      data_files=data_files,
+      #data_files=data_files,
+      include_package_data=True,
+      zip_safe=False,
       license='MIT',
       keywords='gis geographical maps earth usa counties boundaries',
       classifiers=[
