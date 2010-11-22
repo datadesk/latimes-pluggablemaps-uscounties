@@ -45,7 +45,7 @@ for dirpath, dirnames, filenames in os.walk(tagging_dir):
 
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='alpha-0.16',
+      version='alpha-0.17',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',
