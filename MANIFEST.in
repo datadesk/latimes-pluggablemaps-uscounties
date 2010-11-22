@@ -1,0 +1,2 @@
+include us_counties/templates/*
+include us_counties/data/fips.csv

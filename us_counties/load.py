@@ -3,14 +3,17 @@ Utilities for loading boundaries into our Geodjango database.
 """
 import gc
 import os
+import urllib
+import zipfile
 from django.contrib.gis.gdal import DataSource
 from django.contrib.gis.utils import LayerMapping
 
 # The location of this directory
 this_dir = os.path.dirname(__file__)
+data_dir = os.path.join(this_dir, 'data')
 # The location of our source files.
-shp_file = os.path.join(this_dir, 'data/tl_2009_us_county.shp')
-fips_file = os.path.join(this_dir, 'data/fips.csv')
+shp_file = os.path.join(data_dir, 'tl_2009_us_county.shp')
+fips_file = os.path.join(data_dir, 'fips.csv')
 
 
 def all():
@@ -19,14 +22,38 @@ def all():
     
     Example usage:
         
-        >> from mapping.counties import load; load.all()
+        >> from us_counties import load; load.all()
 
     """
     from models import County
-    #print "Flushing data"
+    download()
     [i.delete() for i in County.objects.all()]
     shp()
     extras()
+
+
+def download():
+    """
+    Download the shp files we will use as fodder
+    
+    Example usage:
+    
+        >> from us_counties import load; load.download();
+    
+    """
+    # Download the zip
+    target = 'https://github.com/downloads/datadesk/latimes-pluggablemaps-uscounties/tl_2009_us_county.zip'
+    destination = os.path.join(data_dir, 'tl_2009_us_county.zip')
+    urllib.urlretrieve(target, destination)
+    # Unzip it
+    fh = open(destination, 'rb')
+    zfile = zipfile.ZipFile(fh)
+    for name in zfile.namelist():
+        path = os.path.join(data_dir, name)
+        out = open(path, 'wb')
+        out.write(zfile.read(name))
+        out.close()
+    fh.close()
 
 
 def shp():
@@ -35,7 +62,7 @@ def shp():
     
     Example usage:
     
-        >> from mapping.counties import load; load.shp();
+        >> from us_counties import load; load.shp();
     
     """
     # Import the database model where we want to store the data
@@ -91,7 +118,7 @@ def extras():
         
     Example usage:
     
-        >> from counties import load; load.extras();
+        >> from us_counties import load; load.extras();
         
     """
     from django.template.defaultfilters import slugify
@@ -150,7 +177,7 @@ def specs():
     
     Example usage:
     
-        >> from counties import load; load.specs();
+        >> from us_counties import load; load.specs();
     
     What we get in this case:
     

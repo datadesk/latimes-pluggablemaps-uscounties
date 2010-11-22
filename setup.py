@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='1.0-alpha',
+      version='alpha-0.1',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',
