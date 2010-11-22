@@ -18,6 +18,8 @@ A pluggable "GeoDjango":http://geodjango.org/ app with the boundaries of United 
 h2. Features
 
 * A ready-to-serve model with all the counties in the United States
+* Geometry fields for three of the most common SRIDs.
+* Simplified geometry fields that thin down the data and make it easier to display many polygons on a single map.
 * A read-only admin for reviewing the data
 * Templates that show how the counties can be displayed with common browser-based mapping libraries.
 
