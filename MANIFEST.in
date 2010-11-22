@@ -1,3 +1,2 @@
-include us_counties/templates/*
+recursive-include us_counties/templates *
 include us_counties/data/fips.csv
-prune *.pyc

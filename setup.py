@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='alpha-0.1',
+      version='alpha-0.14',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',
@@ -11,13 +11,13 @@ setup(name='latimes-pluggablemaps-uscounties',
       license='MIT',
       keywords='gis geographical maps earth usa counties boundaries',
       classifiers=[
-                   "Development Status :: 3 - Alpha",
-                   "Intended Audience :: Developers",
-                   "Intended Audience :: Science/Research",
-                   "License :: OSI Approved :: MIT License",
-                   "Operating System :: OS Independent",
-                   "Programming Language :: Python",
-                   "Topic :: Scientific/Engineering :: GIS",
-                   "Topic :: Software Development :: Libraries :: Python Modules"
-                   ],
+       "Development Status :: 3 - Alpha",
+       "Intended Audience :: Developers",
+       "Intended Audience :: Science/Research",
+       "License :: OSI Approved :: MIT License",
+       "Operating System :: OS Independent",
+       "Programming Language :: Python",
+       "Topic :: Scientific/Engineering :: GIS",
+       "Topic :: Software Development :: Libraries :: Python Modules"
+       ],
      )
