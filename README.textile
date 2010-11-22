@@ -69,4 +69,4 @@ h2. Version 1 Roadmap
 # help_text entries for the fields that define the different codes
 # Figure out display names for functional status codes. Anyone know them?
 # Managers that limit the counties to the lower 48 or the 50 states
-
+# Examples that show how you could "loosely couple" one or more data-based apps and models.
