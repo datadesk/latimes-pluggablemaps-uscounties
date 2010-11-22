@@ -26,3 +26,13 @@ def state_detail(request, template='openlayers.html'):
     return direct_to_template(request, template, locals())
 
 
+def json(request):
+    state = request.GET.get('state', None)
+    if not state:
+        raise Http404
+    object_list = County.objects.filter(state=state).only(
+        'full_name', 'slug', 'simple_polygon_4269'
+        )
+    return direct_to_template(request, 'county_list.json', locals(), 'text/javascript')
+
+
