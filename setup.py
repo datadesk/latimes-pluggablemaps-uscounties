@@ -1,3 +1,10 @@
+"""
+Tricks lifted from Django's own setup.py and django_debug_toolbar.
+
+Still not sure why the templates install with this particular config
+and not with some of the others I tried.
+"""
+
 from distutils.core import setup
 from distutils.command.install_data import install_data
 from distutils.command.install import INSTALL_SCHEMES
@@ -68,7 +75,7 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
 
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='alpha-0.17b',
+      version='alpha-0.171',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',

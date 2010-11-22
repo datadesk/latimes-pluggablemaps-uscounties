@@ -1,3 +1,4 @@
 include MANIFEST.in
+include README.textile
 recursive-include us_counties/templates *
 include us_counties/data/fips.csv

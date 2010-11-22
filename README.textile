@@ -11,9 +11,9 @@
                         Y8b d88P Y8b d88P                                                       888               
                          "Y88P"   "Y88P"                                                        888               </code></pre>
 
-A pluggable GeoDjango app with the boundaries of United States counties. Geography, loosely coupled.
+A pluggable "GeoDjango":http://geodjango.org/ app with the boundaries of United States counties. Geography, loosely coupled.
 
-<blink>Beware. This software is alpha and has not yet been widely tested.</blink>
+<blink>Beware. This software is in beta testing and hasn't been used much. But don't let that stop you! Please try it and tell me what sucks.</blink>
 
 h2. Features
 
