@@ -1,4 +1,11 @@
-{% extends "base.html" %}
+{% extends "us_counties/base.html" %}
+
+{% block extra-css %}
+<style type="text/css">
+.county {fill:#007AAA; stroke:#DDD; fillOpacity:0.5;}
+.county .selected {}
+</style>
+{% endblock %}
 
 {% block extra-js %}
     <script type="text/javascript" src="http://github.com/simplegeo/polymaps/raw/v2.3.0/polymaps.min.js"></script>
@@ -8,6 +15,6 @@
 {% block content %}
 <div id="map-canvas" style="width:974px; height:700px;"></div>
 <script type="text/javascript">
-    {% include "polymaps.js" %}
+    {% include "us_counties/polymaps.js" %}
 </script>
 {% endblock %}
