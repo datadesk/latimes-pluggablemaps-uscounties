@@ -1,1 +1,5 @@
-{"type":"FeatureCollection","features":[{% for obj in object_list %}{"type":"Feature","geometry":{{ obj.simple_polygon_4269.json|safe }}}{% if not forloop.last %},{% endif %}{% endfor %}]}
+{"type":"FeatureCollection","features":[{% for obj in object_list %}{
+        "type":"Feature",
+        "properties":{"name": "{{ obj.full_name }}"},
+        "geometry":{{ obj.simple_polygon_4269.json|safe }}
+    }{% if not forloop.last %},{% endif %}{% endfor %}]}
