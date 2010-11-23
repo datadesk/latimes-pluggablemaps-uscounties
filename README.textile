@@ -65,7 +65,6 @@ h2. Version 1 Roadmap
 
 # A speedier loader that doesn't require a huge file download
 # Class-based generic views
-# A polymaps example
 # A raphael example
 # Unit tests
 # help_text entries for the fields that define the different codes
