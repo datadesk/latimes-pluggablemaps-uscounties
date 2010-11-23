@@ -11,7 +11,7 @@ STATE_DICT = {}
 for x, y in STATE_CHOICES: STATE_DICT[x] = y
 
 
-def state_detail(request, template='openlayers.html'):
+def state_detail(request, template='us_counties/openlayers.html'):
     """
     A simple example of how you could make a map of all the counties in a state.
     """
@@ -33,6 +33,6 @@ def json(request):
     object_list = County.objects.filter(state=state).only(
         'full_name', 'slug', 'simple_polygon_4269'
         )
-    return direct_to_template(request, 'county_list.json', locals(), 'text/javascript')
+    return direct_to_template(request, 'us_counties/county_list.json', locals(), 'text/javascript')
 
 

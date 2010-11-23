@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('us_counties.views',
-    url(r'^openlayers/$', 'state_detail', {'template': 'openlayers.html'},
+    url(r'^openlayers/$', 'state_detail', {'template': 'us_counties/openlayers.html'},
         name='us_counties_openlayers'),
     #url(r'^polymaps/$', 'state_detail', {'template': 'polymaps.html'},
     #    name='us_counties_polymaps'),
