@@ -75,7 +75,7 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
 
 
 setup(name='latimes-pluggablemaps-uscounties',
-      version='alpha-0.171',
+      version='alpha-0.172',
       description='L.A. Times Pluggable Maps: U.S. Counties',
       author='Ben Welsh',
       author_email='ben.welsh@gmail.com',
