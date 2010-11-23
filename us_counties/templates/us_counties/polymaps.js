@@ -3,7 +3,7 @@ window.onload = function() {
     var po = org.polymaps;
     map = po.map()
         .container(document.getElementById("map-canvas").appendChild(po.svg("svg")))
-        .zoomRange([1, 6])
+        .zoomRange([1, 7])
         .zoom(4)
         .add(po.interact());
     map.add(po.image().url("http://s3.amazonaws.com/com.modestmaps.bluemarble/{Z}-r{Y}-c{X}.jpg"));
