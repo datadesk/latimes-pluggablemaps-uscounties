@@ -10,9 +10,16 @@ from django.contrib.localflavor.us.us_states import STATE_CHOICES
 STATE_DICT = {}
 for x, y in STATE_CHOICES: STATE_DICT[x] = y
 
+MIMETYPES = {
+    'kml': 'application/vnd.google-earth.kml+xml',
+    'kmz': 'application/vnd.google-earth.kmz',
+    'json': 'application/javascript',
+    'csv': 'text/csv',
+    'html': 'text/html',
+}
 
-def state_detail(request, srid=900913, template='us_counties/openlayers.html',
-    mimetype="text/html"):
+
+def state_detail(request, template, srid=900913, format='html'):
     """
     A simple example of how you could make a map of all the counties in a state.
     """
@@ -27,5 +34,10 @@ def state_detail(request, srid=900913, template='us_counties/openlayers.html',
     object_list = County.objects.filter(state=state).only(
         'full_name', 'slug', 'simple_polygon_%s' % srid
         )
-    return direct_to_template(request, template, locals(), mimetype=mimetype)
+    response = direct_to_template(request, template, locals(), mimetype=MIMETYPES[format])
+    # Force a download to the specified filename, if there is one.
+    if format != 'html':
+        filename = u'filename=%s.%s' % (state_name.lower(), format)
+        response['Content-Disposition'] = filename
+    return response
 
