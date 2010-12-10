@@ -1,0 +1,3 @@
+state,state_fips_code,name,county_fips_code,wkt
+{% for obj in object_list %}"{{ obj.get_state_display|safe }}",{{ obj.state_fips_code }},"{{ obj.full_name|safe }}",{{ obj.county_fips_code }},"{{ obj.simple_polygon_4326 }}"
+{% endfor %}

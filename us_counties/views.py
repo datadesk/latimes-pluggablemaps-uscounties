@@ -29,17 +29,3 @@ def state_detail(request, srid=900913, template='us_counties/openlayers.html',
         )
     return direct_to_template(request, template, locals(), mimetype=mimetype)
 
-
-def state_detail_kml(request):
-    response = state_detail(
-        request,
-        srid=4326,
-        template='us_counties/county_list.kml',
-        mimetype='application/vnd.google-earth.kml+xml',
-    )
-    # Set the filename for the response header
-    filename = u'filename=state.kml'
-    response['Content-Disposition'] = filename
-    return response
-
-
