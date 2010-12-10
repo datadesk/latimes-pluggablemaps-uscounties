@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+    <Document>
+        <name>{{ state_name }}</name>
+        {% for object in object_list %}
+        <Placemark>
+            <name>{{ object.full_name }}</name>
+            {{ object.simple_polygon_4326.kml|safe }}
+        </Placemark>
+        {% endfor %}
+    </Document>
+</kml>

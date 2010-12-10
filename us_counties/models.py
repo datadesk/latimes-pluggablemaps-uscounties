@@ -1,10 +1,10 @@
 # Models
 from django.contrib.gis.db import models
+from django.contrib.localflavor.us.models import USStateField
 
 # Other helpers
 from copy import deepcopy
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.localflavor.us.models import USStateField
 from django.contrib.gis.gdal import OGRGeometry, OGRGeomType
 
 
@@ -187,6 +187,3 @@ class County(models.Model):
             # Stuff the WKT into the field
             setattr(self, target_field_name, target)
         return True
-
-
-
