@@ -10,6 +10,10 @@ urlpatterns = patterns('us_counties.views',
         'template': 'us_counties/county_list.json',
         'mimetype': 'text/javascript',
         }, name='us_counties_json'),
-    url(r'^kml/$', 'state_detail_kml', name='us_counties_kml'),
+    url(r'^kml/$', 'state_detail', {
+        'srid': 4326,
+        'template': 'us_counties/county_list.kml',
+        'mimetype': 'application/vnd.google-earth.kml+xml',
+    }, name='us_counties_kml'),
 )
 
