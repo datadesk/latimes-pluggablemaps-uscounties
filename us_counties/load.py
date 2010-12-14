@@ -133,15 +133,16 @@ def extras():
         obj.slug = u'%s-%s' % (slugify(obj.full_name), slugify(obj.state))
         # .. the full set of polygons...
         obj.set_polygons()
+        obj.set_simple_polygons()
         # ... the square miles ...
         obj.square_miles = obj.get_square_miles()
         # ... save the changes ...
         obj.save()
     # ... and then loop again to set the simple polygons to avoid a weird bug
     # I've had when I do them right after the polygons.
-    for obj in queryset_iterator(County.objects.all()):
-        obj.set_simple_polygons()
-        obj.save()
+#    for obj in queryset_iterator(County.objects.all()):
+#        obj.set_simple_polygons()
+#        obj.save()
 
 
 def queryset_iterator(queryset, chunksize=100):

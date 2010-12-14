@@ -126,8 +126,9 @@ class County(models.Model):
         # Update the rest of the fields
         srid_list.remove(canonical_srid)
         for srid in srid_list:
+            copy = canonical_data.transform(srid, clone=True)
             this_field = 'polygon_%s' % str(srid)
-            setattr(self, this_field, canonical_data)
+            setattr(self, this_field, copy)
         return True
 
     def set_simple_polygons(self, tolerance=500):
