@@ -13,6 +13,8 @@
 
 A pluggable "GeoDjango":http://geodjango.org/ app with the boundaries of United States counties. Geography, loosely coupled.
 
+I gave "a talk":https://docs.google.com/present/view?id=ddw9cxb8_36ct9n7kcc in December 2010 about why I think maps should be pluggable. I also released an example app you can find "here":https://github.com/datadesk/hackshackers-dec2010.
+
 <blink>Beware. This software is in beta testing and hasn't been used much. But don't let that stop you! Please try it and tell me what sucks.</blink>
 
 h2. Features
@@ -22,12 +24,6 @@ h2. Features
 * Simplified geometry fields that thin down the data and make it easier to display many polygons on a single map.
 * A read-only admin for reviewing the data
 * Templates that show how the counties can be displayed with common browser-based mapping libraries.
-
-h2. Concept
-
-<iframe src="https://docs.google.com/present/embed?id=ddw9cxb8_36ct9n7kcc&size=m" frameborder="0" width="555" height="451"></iframe>
-
-I gave a talk in December 2010 about why I think maps should be pluggable. I also released an example app you can find "here":https://github.com/datadesk/hackshackers-dec2010.
 
 h2. Requirements
 
