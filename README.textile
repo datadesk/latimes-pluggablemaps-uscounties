@@ -23,6 +23,12 @@ h2. Features
 * A read-only admin for reviewing the data
 * Templates that show how the counties can be displayed with common browser-based mapping libraries.
 
+h2. Concept
+
+<iframe src="https://docs.google.com/present/embed?id=ddw9cxb8_36ct9n7kcc&size=m" frameborder="0" width="555" height="451"></iframe>
+
+I gave a talk in December 2010 about why I think maps should be pluggable. I also released an example app you can find "here":https://github.com/datadesk/hackshackers-dec2010.
+
 h2. Requirements
 
 Before you begin, you will need to have a Django project with GeoDjango's 'django.contrib.gis' app installed and configured. The official installation guide is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/install/. The official tutorial is "here":http://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/. Both are excellent.
@@ -60,4 +66,5 @@ In in your urls.py file's urlpatterns tuple, add the following.
 Check out the OpenLayers demo by visiting:
 <pre><code>http://localhost:8000/us-counties/openlayers/</code></pre>
 <img src="https://github.com/datadesk/latimes-pluggablemaps-uscounties/raw/master/docs/img/openlayers-600x479.png">
+
 
